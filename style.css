@@ -1,0 +1,226 @@
+:root {
+    --primary: rgb(70, 197, 120);
+    --hover:  rgb(52, 150, 91);
+    --fon: white;
+}
+
+[dark]{
+    --fon: rgb(23, 23, 23);
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    transition: 0.3s ease-in-out;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+body{
+    background:var(--fon);
+    color: var(--primary);
+}
+
+form{
+    margin:250px auto;
+    max-width: 450px;
+    box-shadow: 0px 0px 10px 2px rgba(118, 118, 118, 0.1);
+    padding: 30px 20px;
+    border-radius: 15px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 17px;
+    border: 2px solid rgba(128, 128, 128, 0.3);
+    background: var(--fon);
+    color: var(--primary);
+}
+
+input{
+    width: 100%;
+    border-radius: 25px;
+    border:1px solid rgba(128, 128, 128, 0.3);
+    padding: 10px 15px;
+    font-size: 16px;
+    color: var(--primary);
+    background: var(--fon);
+}
+
+input:focus{
+    outline: none;
+}
+
+button, input[type=submit]{
+    background: var(--primary);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    color: white;
+    padding: 12px;
+    border-radius: 25px;
+    width: 100%;
+    font-size: 16px;
+    border:0;
+}
+
+button:hover, input[type=submit]:hover{
+    background:  var(--hover);
+}
+
+.circle_container{
+    background-color: black;
+    width: 75px;
+    height: 35px;
+    border-radius: 25px;
+}
+
+.circle{
+    transform: translateX(-1px);
+    width: 35px;
+    height:35px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.circle:hover{
+    background-color: white;
+}
+
+.circle.active{
+    transform: translateX(50px);
+}
+
+@keyframes shake {
+    0% {
+     
+      transform: translateY(2px);
+    }
+    25% {
+      transform: translateY(-4px);
+    }
+    50% {
+      transform: translateY(3px);
+    }
+    75% {
+      transform: translateY(-2px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.error{
+    border: 1px solid #ff0000;
+    animation: shake 0.5s;
+}
+
+.header_container{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0px;
+
+    .logo{
+        font-weight: 700;
+        font-size:18px;
+    }
+
+    div:nth-child(2){
+        width: 30%;
+        min-width: 300px;
+    }
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+
+    button{
+        width: fit-content;
+        padding:10px 20px;
+    }
+}
+
+.card{
+    width: 60%;
+
+    #cvc{
+        width: 70px;
+    }
+
+    .date{
+        width: 105px;
+    }
+
+    .number, .author{
+        width: 220px;
+    }
+}
+
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+
+    div{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    input{
+        width: 100%;
+    }
+}
+
+dialog{
+    width: 100%;
+    height: 100%;
+    background: var(--fon);
+    background: rgba(128, 128, 128, 0.1);
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    outline: none;
+    border: none;
+}
+
+dialog form{
+    position: relative;
+}
+
+.card_list{
+    display: flex;
+    margin-top: 50px;
+    gap:50px;
+}
+
+.card_container{
+    font-size: 18px;
+    display: flex;
+    padding:20px;
+    border-radius: 20px;
+    border: 2px solid rgba(128, 128, 128, 0.3);
+    line-height: 32px;
+    width: 300px;
+}
